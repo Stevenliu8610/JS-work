@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+  </head>
+  <body>
+      <script>
+      let data={overtimeKindName: "一般出勤",
+children:
+[
+  	{
+    	overtimeItemId: "111",
+    	overtimeItemName: "出勤日",
+    	overtimeRate:
+      	[
+         	{id: "11101", startHour: 0, endHour: 2, rate: 1.34},
+         	{id: "11102", startHour: 2, endHour: 6, rate: 1.68},
+         	{id: "11103", startHour: 6, endHour: 8, rate: 1.8}
+          	]
+ 	},
+  {
+    	overtimeItemId: "112",
+    	overtimeItemName: "休息日",
+    	overtimeRate:
+    	[],
+	},
+ 	{
+    	overtimeItemId: "113",
+    	overtimeItemName: "出勤日",
+    	overtimeRate:
+    	[
+         	{id: "11201", startHour: 0, endHour: 2, rate: 1.34},
+         	{id: "11202", startHour: 2, endHour: 6, rate: 1.68},
+         	{id: "11203", startHour: 6, endHour: 8, rate: 1.8}
+      	],
+	}
+  ]
+}
+
+        // let data.o=children.filter(function(rate){
+        //     // return overtimeRate.length>0
+        //     return rate.overtimeRate.length>0;
+        // })
+            data.children=data.children.filter(function(Rate){
+                return Rate.overtimeRate.length>0;
+            })
+
+            console.log(data);
+       
+      </script>
+  </body>
+</html>
